@@ -1,0 +1,39 @@
+.btn {
+  border: none;
+
+  &--close {
+    position: relative;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 1px;
+      background-color: #242020;
+      top: 50%;
+      left: calc(50% - 8px);
+    }
+
+    &::before {
+      transform: rotate(45deg) ;
+    }
+    &::after {
+      transform: rotate(-45deg) ;
+    }
+  }
+
+  &--primary {
+    padding: 24px 18px;
+    box-shadow: 0 10px 33px 2px rgba(231, 66, 112, 0.3);
+    border-radius: 32px;
+    background-image: linear-gradient(45deg, #f31843 0%, #f13b54 100%);
+    color: white;
+    font-weight: 700;
+    font-family: 'Open Sans' , sans-serif;
+
+    @include media-breakpoint-up(sm) {
+      padding: 25px 30px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.modal-primary {
+  & * {
+    box-sizing: border-box;
+  }
+  &__header {
+    border-bottom: none;
+    padding: 0;
+    position: relative;
+  }
+
+  &__dialog {
+    @include media-breakpoint-up(lg) {
+      max-width: 910px; 
+    }
+    box-shadow: 0 0 34px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &__body {
+    padding: 0;
+  }
+
+  &__content {
+    border-radius: 0;
+    border: none;
+  }
+
+  &__close {
+    background-color: #fff;
+    border: none;
+    position: relative;
+    right: 20px;
+    top: 20px;
+    
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      width: 41px;
+      height: 41px;
+      right: -25px;
+      top: 16px;
+    }
+  }
+
+  &__inner {
+    @include media-breakpoint-up(lg) {
+      @include make-row();
+    }
+  }
+
+  &__info, &__img-box {
+    @include make-col-ready();
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    } 
+  }
+
+  &__img-box {
+     padding: 0;
+     padding-right: 15px;
+     display: none;
+
+     @include media-breakpoint-up(lg) {
+       display: flex;
+     }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 60px 40px;
+   
+    @include media-breakpoint-up(sm) {
+      padding-left: 76px;
+      padding-top: 70px;
+      padding-right: 88px;
+      padding-bottom: 70px;
+    }
+  }
+}

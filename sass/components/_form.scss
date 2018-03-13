@@ -1,0 +1,18 @@
+.form-primary {
+ 
+}
+
+.field {
+  position: relative;
+}
+
+.placeholder {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-70%);
+  color: #707070;
+  font-size: 14px;
+  font-style: italic;
+  font-family: 'Open Sans' , sans-serif;
+}

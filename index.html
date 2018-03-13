@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn--primary" data-toggle="modal" data-target="#modal-primary">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal modal-primary fade" id="modal-primary" tabindex="-1" role="dialog" aria-labelledby="modal-primary-label" aria-hidden="true">
+  <div class="modal-dialog modal-primary__dialog" role="document">
+    <div class="modal-content modal-primary__content">
+      <div class="modal-header modal-primary__header">
+        <button type="button" class="close btn--close modal-primary__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body modal-primary__body">
+        <div class="modal-primary__inner">
+          <div class="modal-primary__info">
+            <h3 class="title-secondary"> Lorem Ipsum</h3>
+            <p class="paragraph">Заполните данные, чтобы мы могли отправить скидоч`ное предложение с ценой на Вашу почту.</p>
+            <form action="" class="form-primary modal-primary__form">
+              <div class="field">
+                <input id="form-primary-name" type="text" class="input-primary" required>
+                <label class="placeholder" for="form-primary-name">Как к вам обращаться?</label>
+              </div>
+              <div class="field">
+                <input id="form-pimary-email" type="email" class="input-primary" required>
+                <label class="placeholder" for="form-pimary-email">Ваш email <span class="text-danger">*</span></label>
+              </div>
+              <div class="field">
+                <input id="form-pimary-phone" type="tel" class="input-primary" required>
+                <label class="placeholder" for="form-pimary-phone">Ваш номер телефона <span class="text-danger">*</span></label>
+              </div>
+              <button class="btn btn--primary mt-3">
+                Получить цену со скидкой
+              </button>
+            </form>
+          </div>
+          <div class="modal-primary__img-box"><img src="images/modalImg.jpg" alt="" class="img modal-primary__img"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/bundle.js"></script>
+<script>
+
+  function onInputField() {
+    var placeholder = document.querySelector('#' + this.id + ' + ' + '.placeholder');
+    if (this.value.length > 0) {
+      placeholder.classList.add('zoomOut', 'animated');
+    } else {
+      placeholder.classList.remove('zoomOut', 'animated');
+      placeholder.classList.add('zoomIn', 'animated');
+    }
+  }
+
+  var placeholders = document.querySelector('.input-primary');
+
+  document.querySelectorAll('.input-primary').forEach((element) => {
+    element.oninput =  onInputField;
+  });
+
+</script>
+</body>
+</html>

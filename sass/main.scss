@@ -1,0 +1,27 @@
+/*
+
+Theme Name: iResidence
+Theme URI
+Author: OlegFilth
+Descriprion: My first custom theme for wordperss
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, sidebar, clean, responsive, iResidence
+
+*/
+
+@import 'abstracts/variables.scss';
+
+@import 'vendors/_bootstrap/bootstrap';
+@import 'vendors/animateCSS.scss';
+
+@import 'base/base.scss';
+@import 'base/typography.scss';
+
+@import 'components/buttons.scss';
+@import 'components/form.scss';
+@import 'components/inputs.scss';
+@import 'components/modal.scss';
+
+
