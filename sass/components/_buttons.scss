@@ -3,7 +3,7 @@
 
   &--close {
     position: relative;
-
+    z-index: 1;
     &::before, &::after {
       content: '';
       display: block;
